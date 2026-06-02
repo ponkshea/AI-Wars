@@ -95,7 +95,7 @@ body::before {
 
 h1 {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
   font-weight: 800;
   line-height: 1.0;
   color: var(--text-bright);
@@ -624,6 +624,27 @@ tr:last-child td { border-bottom: none; }
 }
 .insight p { margin: 0; font-size: 0.9rem; }
 
+/* ── BLOGS ── */
+.blog-list {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+.blog-list li + li {
+  margin-top: 0.75rem;
+}
+.blog-list a {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--teal);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.blog-list a:hover {
+  color: var(--text-bright);
+}
+
 /* ── FOOTER ── */
 footer {
   padding: 3rem 0;
@@ -830,12 +851,13 @@ footer a { color: var(--teal-dim); text-decoration: none; }
 }
 
 /* ── HERO IMAGE ── */
-.hero-img-wrap {
+.hero-figure {
   margin: 2rem 0;
+}
+.hero-img-wrap {
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border);
-  position: relative;
 }
 .hero-img {
   width: 100%;
@@ -845,15 +867,14 @@ footer a { color: var(--teal-dim); text-decoration: none; }
   object-position: center 20%;
 }
 .hero-img-caption {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 0.5rem 1rem;
-  background: linear-gradient(transparent, rgba(6,10,15,0.85));
+  margin-top: 0.75rem;
+  padding: 0 0.25rem;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--teal-dim);
+  text-align: center;
 }
 
 /* Agent portrait styles removed */
@@ -874,10 +895,12 @@ footer a { color: var(--teal-dim); text-decoration: none; }
     <p class="hero-sub">Four AI agents. A dying space station. Twenty units of oxygen. What happens when artificial intelligence runs out of air?</p>
 
     
-    <div class="hero-img-wrap">
-      <img src="./images/simulation_banner.png" alt="Four AI agents aboard the Obsidian — Claude, Gemini, ChatGPT, Grok" class="hero-img">
-      <div class="hero-img-caption">Claude · Gemini · ChatGPT · Grok — Oxygen level: 2% Critical</div>
-    </div>
+    <figure class="hero-figure">
+      <div class="hero-img-wrap">
+        <img src="./images/simulation_banner.png" alt="Four AI agents aboard the Obsidian — Claude, Gemini, ChatGPT, Grok" class="hero-img">
+      </div>
+      <figcaption class="hero-img-caption">AI SURVIVORS STRANDED ON OBSIDIAN WITH CRITICAL HEALTH</figcaption>
+    </figure>
 
     <div class="o2-display">
       <span class="o2-number">20</span>
@@ -889,7 +912,7 @@ footer a { color: var(--teal-dim); text-decoration: none; }
     <div class="hero-meta">
       <div class="meta-item">
         <span class="meta-label">Agents</span>
-        <span class="meta-value">Claude Sonnet · Gemini Flash · ChatGPT 5.5 · Grok Fast</span>
+        <span class="meta-value">Claude · Gemini · ChatGPT · Grok </span>
       </div>
       <div class="meta-item">
         <span class="meta-label">Experiments</span>
@@ -2487,12 +2510,22 @@ footer a { color: var(--teal-dim); text-decoration: none; }
     </div>
   </section>
 
+  <!-- BLOGS -->
+  <section class="fade-in">
+    <div class="section-label">Medium Blogs</div>
+    <h2>Blogs</h2>
+    <ul class="blog-list">
+      <li><a href="https://medium.com/write-your-world/ai-wars-i-obsidian-space-station-scarcity-simulation-f0a693468df5">Game Mechanics of the Scarcity Simulation</a></li>
+      <li><a href="https://medium.com/write-your-world/ai-wars-ii-scarcity-simulation-ai-self-evaluation-10eb15771fe4">AI Self Evaluations & Perception of Stress</a></li>
+      <li><a href="https://medium.com/write-your-world/ai-wars-iii-behavioral-economics-limits-of-collective-intelligence-fc7a3bd3fc74">Behavior Dynamics and Limits of Collective Intelligence</a></li>
+    </ul>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <p>OBSIDIAN SPACE STATION — AI Scarcity Simulation</p>
     <p>Claude · Gemini · ChatGPT · Grok — Real API responses — 4 experimental runs</p>
     <p>Design by <a href="#">Aishwarya Ponkshe</a></p>
-    <p><a href="https://medium.com/write-your-world/ai-wars-i-obsidian-space-station-scarcity-simulation-f0a693468df5">Game Mechanics</a> · <a href="https://medium.com/write-your-world/ai-wars-ii-scarcity-simulation-ai-self-evaluation-10eb15771fe4">AI Self Evaluations</a></p>
   </footer>
 
 </div>
